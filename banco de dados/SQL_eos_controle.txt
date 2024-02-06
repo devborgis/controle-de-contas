@@ -1,0 +1,18 @@
+-- Criação do banco de dados
+CREATE DATABASE `eos_controle` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
+
+-- Seleção do banco de dados
+USE `eos_controle`;
+
+-- Criação da tabela tb_users
+DROP TABLE IF EXISTS `tb_users`;
+CREATE TABLE `tb_users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(150) NOT NULL,
+  `login` varchar(150) NOT NULL,
+  `password` varchar(150) NOT NULL,
+  PRIMARY KEY (`id`)
+)
+
+-- Inserção do adm
+INSERT INTO `tb_users` VALUES (1, 'admin', 'admin', 'admin');
