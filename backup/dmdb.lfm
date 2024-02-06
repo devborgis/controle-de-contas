@@ -1,0 +1,19 @@
+object DM: TDM
+  OldCreateOrder = False
+  Height = 340
+  HorizontalOffset = 352
+  VerticalOffset = 250
+  Width = 267
+  object cMariaDB: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = True
+    Port = 0
+    Left = 48
+    Top = 16
+  end
+  object qryUsers: TZQuery
+    Params = <>
+    Left = 144
+    Top = 16
+  end
+end

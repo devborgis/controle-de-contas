@@ -1,0 +1,117 @@
+object frmLogin: TfrmLogin
+  Left = 796
+  Height = 390
+  Top = 354
+  Width = 343
+  BorderStyle = bsNone
+  Caption = 'Sistemas Controlador de Contas'
+  ClientHeight = 390
+  ClientWidth = 343
+  Color = clNone
+  DesignTimePPI = 120
+  OnCreate = FormCreate
+  object Label1: TLabel
+    Left = 16
+    Height = 20
+    Top = 104
+    Width = 37
+    Caption = 'Login'
+  end
+  object editLogin: TEdit
+    Left = 16
+    Height = 28
+    Top = 128
+    Width = 304
+    TabOrder = 0
+    TextHint = 'Digite seu login'
+    OnChange = editLoginChange
+  end
+  object Label2: TLabel
+    Left = 16
+    Height = 20
+    Top = 168
+    Width = 40
+    Caption = 'Senha'
+  end
+  object editPassaword: TEdit
+    Left = 16
+    Height = 28
+    Top = 192
+    Width = 280
+    EchoMode = emPassword
+    PasswordChar = '*'
+    TabOrder = 1
+    TextHint = 'Digite sua senha'
+  end
+  object Image1: TImage
+    Left = 296
+    Height = 28
+    Top = 192
+    Width = 24
+    Center = True
+    ImageIndex = 1
+    Images = ImageList1
+    OnClick = Image1Click
+  end
+  object Label3: TLabel
+    Left = 43
+    Height = 20
+    Top = 64
+    Width = 253
+    Align = alCustom
+    Caption = 'SISTEMA CONTROLADOR DE CONTAS'
+    Color = clBlack
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 112
+    Height = 20
+    Top = 344
+    Width = 114
+    Align = alCustom
+    Caption = '©BORGIS vAlpha'
+    Color = clBlack
+    ParentColor = False
+  end
+  object btnLogin: TButton
+    Left = 16
+    Height = 31
+    Top = 240
+    Width = 302
+    Caption = 'LOGAR'
+    Color = 13041606
+    ModalResult = 1
+    TabOrder = 2
+    OnClick = btnLoginClick
+  end
+  object btnCancel: TButton
+    Left = 16
+    Height = 31
+    Top = 280
+    Width = 302
+    Caption = 'SAIR'
+    Color = 11053311
+    ModalResult = 11
+    TabOrder = 3
+    OnClick = btnCancelClick
+  end
+  object ImageList1: TImageList
+    BlendColor = clBlack
+    Left = 272
+    Top = 240
+    Bitmap = {
+      4C7A020000001000000010000000550100000000000078DAED94B14A03411086
+      4F2C038688890F7088BE45D4520B09420A5F205DB03211B4B6B109285A042D2D
+      D285BC424A6D4448D02660132DD2D89FFFC2B7B01C7339AD1471E083BBD9F96F
+      6667672F8AFE9C55C4A1E88B47E8E35B9DA32B88733115176257ACC10EBE2931
+      859476438CC495288905B12D8EC49368E32B113342E36C5DBC8A7AF0BD9658E2
+      F946247CC35B1D8DD33E8883543D63B12796594FF085E634F760E99314597AAB
+      FEB6A1CFAA3FAB7F2D728E73FA679DDFE537CFEFABF35389FEEDA7AD2ABA3931
+      45B12F8EC13D2FA27D139B193A77E73A622606E20C4ED07C70AF2C8BC58BB816
+      65B1229AF87DDE3B626263769F458377A79D907B8BBC35D61AC48633EC7CBDE0
+      BD89D6E71DE2F3D60B7259FA98BCBE57B739FA74FD556A1EA29DB0A7ACFA7DCE
+      D3A0E61A399B68CBF4D6EA5F381BEFC6F90DF07582FFAAA5F5FBB5E6A7983373
+      DD3973F56BED1329406BDD
+    }
+  end
+end

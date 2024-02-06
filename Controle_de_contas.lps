@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="Controle_de_contas.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="33"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ucontroledecontas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmLogin"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uControleDeContas"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="37"/>
+        <CursorPos X="17" Y="73"/>
+        <UsageCount Value="33"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="dmdb.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DM"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="DMDB"/>
+        <EditorIndex Value="1"/>
+        <CursorPos X="11"/>
+        <UsageCount Value="31"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\Users\ADM\AppData\Local\lazarus\onlinepackagemanager\packages\zeosdbo\src\dbc\ZDbcMySqlUtils.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="300"/>
+        <CursorPos Y="312"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="29">
+      <Position>
+        <Filename Value="ucontroledecontas.pas"/>
+        <Caret Line="50" Column="33" TopLine="27"/>
+      </Position>
+      <Position>
+        <Filename Value="ucontroledecontas.pas"/>
+        <Caret Line="55" Column="6" TopLine="31"/>
+      </Position>
+      <Position>
+        <Filename Value="ucontroledecontas.pas"/>
+        <Caret Line="40" Column="41"/>
+      </Position>
+      <Position>
+        <Filename Value="ucontroledecontas.pas"/>
+        <Caret Line="41" Column="41" TopLine="16"/>
+      </Position>
+      <Position>
+        <Filename Value="ucontroledecontas.pas"/>
+        <Caret Line="61" Column="37" TopLine="37"/>
+      </Position>
+      <Position>
+        <Filename Value="ucontroledecontas.pas"/>
+        <Caret Line="59" Column="3" TopLine="42"/>
+      </Position>
+      <Position>
+        <Filename Value="ucontroledecontas.pas"/>
+        <Caret Line="60" Column="3" TopLine="43"/>
+      </Position>
+      <Position>
+        <Filename Value="ucontroledecontas.pas"/>
+        <Caret Line="61" Column="3" TopLine="44"/>
+      </Position>
+      <Position>
+        <Filename Value="ucontroledecontas.pas"/>
+        <Caret Line="56" Column="3" TopLine="45"/>
+      </Position>
+      <Position>
+        <Filename Value="ucontroledecontas.pas"/>
+        <Caret Line="52" Column="18" TopLine="46"/>
+      </Position>
+      <Position>
+        <Filename Value="ucontroledecontas.pas"/>
+        <Caret Line="72" Column="5" TopLine="50"/>
+      </Position>
+      <Position>
+        <Filename Value="ucontroledecontas.pas"/>
+        <Caret Line="29" Column="15" TopLine="17"/>
+      </Position>
+      <Position>
+        <Filename Value="dmdb.pas"/>
+      </Position>
+      <Position>
+        <Filename Value="ucontroledecontas.pas"/>
+        <Caret Line="8" Column="76"/>
+      </Position>
+      <Position>
+        <Filename Value="ucontroledecontas.pas"/>
+        <Caret Line="58" Column="3" TopLine="55"/>
+      </Position>
+      <Position>
+        <Filename Value="ucontroledecontas.pas"/>
+        <Caret Line="59" Column="3" TopLine="56"/>
+      </Position>
+      <Position>
+        <Filename Value="ucontroledecontas.pas"/>
+        <Caret Line="58" Column="3" TopLine="55"/>
+      </Position>
+      <Position>
+        <Filename Value="ucontroledecontas.pas"/>
+        <Caret Line="68" Column="67" TopLine="56"/>
+      </Position>
+      <Position>
+        <Filename Value="ucontroledecontas.pas"/>
+        <Caret Line="69" Column="67" TopLine="57"/>
+      </Position>
+      <Position>
+        <Filename Value="ucontroledecontas.pas"/>
+        <Caret Line="68" Column="67" TopLine="56"/>
+      </Position>
+      <Position>
+        <Filename Value="ucontroledecontas.pas"/>
+        <Caret Line="77" Column="36" TopLine="56"/>
+      </Position>
+      <Position>
+        <Filename Value="ucontroledecontas.pas"/>
+        <Caret Line="68" Column="47" TopLine="55"/>
+      </Position>
+      <Position>
+        <Filename Value="ucontroledecontas.pas"/>
+        <Caret Line="41" Column="32" TopLine="31"/>
+      </Position>
+      <Position>
+        <Filename Value="ucontroledecontas.pas"/>
+        <Caret Line="68" Column="61" TopLine="68"/>
+      </Position>
+      <Position>
+        <Filename Value="ucontroledecontas.pas"/>
+        <Caret Line="41" Column="7" TopLine="29"/>
+      </Position>
+      <Position>
+        <Filename Value="ucontroledecontas.pas"/>
+        <Caret Line="60" Column="110" TopLine="47"/>
+      </Position>
+      <Position>
+        <Filename Value="ucontroledecontas.pas"/>
+        <Caret Line="62" Column="64" TopLine="50"/>
+      </Position>
+      <Position>
+        <Filename Value="ucontroledecontas.pas"/>
+        <Caret Line="69" Column="14" TopLine="56"/>
+      </Position>
+      <Position>
+        <Filename Value="ucontroledecontas.pas"/>
+        <Caret Line="73" Column="68" TopLine="56"/>
+      </Position>
+      <Position>
+        <Filename Value="ucontroledecontas.pas"/>
+        <Caret Line="75" Column="59" TopLine="59"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>
