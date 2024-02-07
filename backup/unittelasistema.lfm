@@ -1,0 +1,137 @@
+object frmLogado: TfrmLogado
+  Left = 352
+  Height = 563
+  Top = 250
+  Width = 1171
+  BorderStyle = bsToolWindow
+  Caption = 'EOS - Controle de contas'
+  ClientHeight = 563
+  ClientWidth = 1171
+  Color = 15132390
+  DesignTimePPI = 120
+  Position = poScreenCenter
+  object pnl_menu: TPanel
+    Left = 0
+    Height = 563
+    Top = 0
+    Width = 210
+    Align = alLeft
+    BevelOuter = bvNone
+    ClientHeight = 563
+    ClientWidth = 210
+    Color = 16766421
+    DoubleBuffered = True
+    ParentBackground = False
+    ParentColor = False
+    ParentDoubleBuffered = False
+    ParentShowHint = False
+    TabOrder = 0
+    object btnMenu: TSpeedButton
+      Left = 8
+      Height = 40
+      Top = 8
+      Width = 186
+      Alignment = taLeftJustify
+      Caption = 'MENU'
+      Color = clNone
+      Flat = True
+      Font.Color = clBlack
+      Font.Style = [fsBold]
+      HotImageIndex = 0
+      Images = ImageList1
+      ImageIndex = 0
+      Margin = 10
+      OnClick = btnMenuClick
+      ParentFont = False
+    end
+    object btnPagar: TSpeedButton
+      Left = 8
+      Height = 40
+      Top = 40
+      Width = 186
+      Alignment = taLeftJustify
+      Caption = 'CONTAS A PAGAR'
+      Color = clNone
+      Flat = True
+      Font.Color = clBlack
+      Font.Style = [fsBold]
+      HotImageIndex = 1
+      Images = ImageList1
+      ImageIndex = 1
+      Margin = 10
+      ParentFont = False
+    end
+    object btnReceber: TSpeedButton
+      Left = 8
+      Height = 40
+      Top = 72
+      Width = 186
+      Alignment = taLeftJustify
+      Caption = 'CONTAS A RECEBER'
+      Color = clNone
+      Flat = True
+      Font.Color = clBlack
+      Font.Style = [fsBold]
+      HotImageIndex = 1
+      Images = ImageList1
+      ImageIndex = 1
+      Margin = 10
+      ParentFont = False
+    end
+    object btnUser: TSpeedButton
+      Left = 8
+      Height = 40
+      Top = 104
+      Width = 186
+      Alignment = taLeftJustify
+      Caption = 'USUÁRIOS'
+      Color = clNone
+      Flat = True
+      Font.Color = clBlack
+      Font.Style = [fsBold]
+      HotImageIndex = 2
+      Images = ImageList1
+      ImageIndex = 2
+      Margin = 10
+      ParentFont = False
+    end
+  end
+  object pnl_visualizacao: TPanel
+    Left = 210
+    Height = 563
+    Top = 0
+    Width = 961
+    Align = alClient
+    Color = clSilver
+    DoubleBuffered = True
+    ParentBackground = False
+    ParentColor = False
+    ParentDoubleBuffered = False
+    ParentShowHint = False
+    TabOrder = 1
+  end
+  object ImageList1: TImageList
+    Left = 24
+    Top = 192
+    Bitmap = {
+      4C7A030000001000000010000000110200000000000078DAED94CB2B455114C6
+      2F42A2D02DEF224ACA5B6124264C7493F22E2413729389D72513858B18781403
+      E522EF0CBD0DFC07261E2397FFC1986FD7776B3BADC3395D19DD55BFCE3E7BEF
+      75CE5A6B7F6B3B1C21A37DDAC468CD36F96B3BB2C95FFB076BC1D62FD8F30BD9
+      77CB01E5367DE24013E80727601E6C823DD066C1BF1B9C812AD0022A402EB806
+      8D16FCC3C121F70F8155C6716F238724B0A6BD678375B0CC3CB6408C896F18E8
+      000FC0056AC02CF800EFCCADD3C4379EB1ABF574D00E7A41298802036007D409
+      BE11E018E409F5D0AD90FB220DF383A041388B03506698AF051386B95341074B
+      A015540BF11E6A31648219614F3BBFDB23AC0D83628E953E268533ECE4FFD705
+      7F37A8E4381AEC0A7BEA810F94086B4AD389DAFB14E813EA2DE9A38B7D21E5BB
+      CF58565993693E57387FC07A84FDF21FA5A50C90C567C23FDF1D4EEA49E9C4C3
+      B1D3829FD2F938F08373F6CE1CC76A6E8C7BCC7C557FDE5013A93C6737C76AEE
+      8E7594BE314EDF5890025EC03679E19CD2F52D1815F27DE33F02FADAD6D67DEC
+      DF805EFD867A343047C70FFE6EEDFD8AF74BC03CAC53C08CF13F83646D7D8E3E
+      BABFD790531AE73D1CEBE635F8ABF82F382E607F3CF1CE533C820D906F12BF93
+      3559E4D3C3BD09A4803DAE6ABC20D4CF416DA87BB6E8077D1573CF88897E7679
+      BEB9C27A1EF5E3FB45834A1BAFE09275F6325F3FFF1B65B17F5C5AFFB82CF68F
+      6DFB02C6619980
+    }
+  end
+end

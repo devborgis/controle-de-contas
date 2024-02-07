@@ -1,19 +1,35 @@
 object DM: TDM
   OldCreateOrder = False
-  Height = 340
-  HorizontalOffset = 352
-  VerticalOffset = 250
-  Width = 267
+  Height = 425
+  HorizontalOffset = 440
+  VerticalOffset = 313
+  Width = 334
+  PPI = 120
   object cMariaDB: TZConnection
     ControlsCodePage = cCP_UTF8
     AutoEncodeStrings = True
-    Port = 0
-    Left = 48
-    Top = 16
+    Properties.Strings = (
+      'AutoEncodeStrings=ON'
+      'controls_cp=CP_UTF8'
+    )
+    BeforeConnect = cMariaDBBeforeConnect
+    HostName = 'localhost'
+    Port = 3306
+    Database = 'eos_controle'
+    User = 'root'
+    Password = 'masterkey'
+    Protocol = 'MariaDB-10'
+    LibraryLocation = 'C:\Program Files\MariaDB 11.4\lib\libmariadb.dll'
+    Left = 60
+    Top = 20
   end
-  object qryUsers: TZQuery
+  object qryUserLogin: TZQuery
+    Connection = cMariaDB
+    SQL.Strings = (
+      'select * from tb_users '
+    )
     Params = <>
-    Left = 144
-    Top = 16
+    Left = 180
+    Top = 20
   end
 end

@@ -13,7 +13,8 @@ type
 
   TDM = class(TDataModule)
     cMariaDB: TZConnection;
-    qryUsers: TZQuery;
+    qryUserLogin: TZQuery;
+    procedure cMariaDBBeforeConnect(Sender: TObject);
   private
 
   public
@@ -26,6 +27,16 @@ var
 implementation
 
 {$R *.lfm}
+
+{ TDM }
+
+procedure TDM.cMariaDBBeforeConnect(Sender: TObject);
+begin
+  cMariaDB.Database:=NomeBD;
+  cMariaDB.HostName:=HostBD;
+  cMariaDB.Password:=SenhaBD;
+  cMariaDB.Port := StrToInt(PortaBD);
+end;
 
 end.
 

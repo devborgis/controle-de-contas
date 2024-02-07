@@ -1,4 +1,4 @@
-unit uControleDeContas;
+unit unitTelaLogin;
 
 {$mode objfpc}{$H+}
 
@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls,
-  Buttons;
+  Buttons, IniFiles;
 
 type
 
@@ -23,34 +23,38 @@ type
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
+    btnConf: TSpeedButton;
     procedure btnCancelClick(Sender: TObject);
+    procedure btnConfClick(Sender: TObject);
     procedure btnLoginClick(Sender: TObject);
-    procedure editLoginChange(Sender: TObject);
-    procedure FormCreate(Sender: TObject);
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
+    procedure FormShow(Sender: TObject);
     procedure Image1Click(Sender: TObject);
   private
 
   public
-
+    procedure lerINI;
   end;
 
 var
   frmLogin: TfrmLogin;
+  NomeBD , HostBD, PortaBD, SenhaBD : string;
 
 implementation
-  uses DMDB;
+  uses DMDB, unitTelaSistema, unitConfINI;
 {$R *.lfm}
 
 { TfrmLogin }
 
-procedure TfrmLogin.editLoginChange(Sender: TObject);
-begin
-
-end;
-
 procedure TfrmLogin.btnCancelClick(Sender: TObject);
 begin
   frmLogin.Close;
+end;
+
+procedure TfrmLogin.btnConfClick(Sender: TObject);
+begin
+  frmConfINI.ShowModal;
+  frmLogin.ModalResult:= mrClose;
 end;
 
 procedure TfrmLogin.btnLoginClick(Sender: TObject);
@@ -62,9 +66,12 @@ begin
   dm.qryUserLogin.ParamByName('password').AsString := editPassword.Text;
   dm.qryUserLogin.Open;
 
-  if (dm.qryUserLogin.RecordCount > 0) then
+  if (dm.qryUserLogin.RecordCount = 1) then
   begin
-    ShowMessage('Sucesso');
+    editLogin.Clear;
+    editPassword.Clear;
+    frmLogado.ShowModal;
+    frmLogin.close;
   end
   else
   begin
@@ -77,9 +84,14 @@ begin
 end;
 
 
-procedure TfrmLogin.FormCreate(Sender: TObject);
+procedure TfrmLogin.FormShow(Sender: TObject);
 begin
-  Image1.ImageIndex := 1;
+   Image1.ImageIndex := 1;
+   if FileExists(ExtractFilePath(ParamStr(0)) + 'CONFIG.INI') then
+      lerINI
+   else
+     ShowMessage('Arquivo INI não criado, configure os paramêtros para conexão com o banco de dados');
+     frmConfINI.ShowModal;
 end;
 
 procedure TfrmLogin.Image1Click(Sender: TObject);
@@ -93,6 +105,26 @@ begin
   begin
     Image1.ImageIndex := 1;
     editPassword.PasswordChar := '*';
+  end;
+
+end;
+
+procedure TfrmLogin.lerINI;
+var
+  Ini: TIniFile;
+  IniFile: string;
+begin
+  IniFile := ExtractFilePath(ParamStr(0)) + 'CONFIG.INI';
+
+  Ini := TIniFile.Create(IniFile);
+
+  try
+    NomeBD  := Ini.ReadString('CONEXAO', 'NOME_BD', '');
+    HostBD  := Ini.ReadString('CONEXAO', 'HOST', '');
+    PortaBD := Ini.ReadString('CONEXAO', 'PORTA', '');
+    SenhaBD := Ini.ReadString('CONEXAO', 'SENHA', '');
+  finally
+    Ini.Free;
   end;
 end;
 

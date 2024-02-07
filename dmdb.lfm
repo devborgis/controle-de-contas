@@ -12,7 +12,7 @@ object DM: TDM
       'AutoEncodeStrings=ON'
       'controls_cp=CP_UTF8'
     )
-    Connected = True
+    BeforeConnect = cMariaDBBeforeConnect
     HostName = 'localhost'
     Port = 3306
     Database = 'eos_controle'
@@ -25,7 +25,6 @@ object DM: TDM
   end
   object qryUserLogin: TZQuery
     Connection = cMariaDB
-    Active = True
     SQL.Strings = (
       'select * from tb_users '
     )

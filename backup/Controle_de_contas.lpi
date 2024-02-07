@@ -38,12 +38,12 @@
         <IsPartOfProject Value="True"/>
       </Unit>
       <Unit>
-        <Filename Value="ucontroledecontas.pas"/>
+        <Filename Value="unittelalogin.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmLogin"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="uControleDeContas"/>
+        <UnitName Value="unitTelaLogin"/>
       </Unit>
       <Unit>
         <Filename Value="dmdb.pas"/>
@@ -52,6 +52,22 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="DMDB"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unittelasistema.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmLogado"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="unitTelaSistema"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unitconfini.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmConfINI"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="unitConfINI"/>
       </Unit>
     </Units>
   </ProjectOptions>
