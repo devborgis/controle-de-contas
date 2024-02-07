@@ -5,7 +5,7 @@ unit DMDB;
 interface
 
 uses
-  Classes, SysUtils, ZConnection, ZDataset;
+  Classes, SysUtils, ZConnection, ZDataset, unitTelaLogin;
 
 type
 
@@ -14,6 +14,7 @@ type
   TDM = class(TDataModule)
     cMariaDB: TZConnection;
     qryUserLogin: TZQuery;
+    procedure cMariaDBBeforeConnect(Sender: TObject);
   private
 
   public
@@ -26,6 +27,16 @@ var
 implementation
 
 {$R *.lfm}
+
+{ TDM }
+
+procedure TDM.cMariaDBBeforeConnect(Sender: TObject);
+begin
+  cMariaDB.Database:=NomeBD;
+  cMariaDB.HostName:=HostBD;
+  cMariaDB.Password:=SenhaBD;
+  cMariaDB.Port := StrToInt(PortaBD);
+end;
 
 end.
 
