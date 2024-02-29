@@ -32,12 +32,10 @@ type
   private
 
   public
-    procedure lerINI;
   end;
 
 var
   frmLogin: TfrmLogin;
-  NomeBD , HostBD, PortaBD, SenhaBD : string;
 
 implementation
   uses DMDB, unitTelaSistema, unitConfINI;
@@ -84,13 +82,22 @@ end;
 
 
 procedure TfrmLogin.FormShow(Sender: TObject);
+var
+  DM: TDM;
 begin
    Image1.ImageIndex := 1;
    if FileExists(ExtractFilePath(ParamStr(0)) + 'CONFIG.INI') then
-      lerINI
-   else
+   else begin
      ShowMessage('Arquivo INI não criado, configure os paramêtros para conexão com o banco de dados');
      frmConfINI.ShowModal;
+   end;
+
+  DM := TDM.Create(nil);
+  try
+    DM.ConfigurarConexao;
+  finally
+    DM.Free;
+  end;
 end;
 
 procedure TfrmLogin.Image1Click(Sender: TObject);
@@ -104,26 +111,6 @@ begin
   begin
     Image1.ImageIndex := 1;
     editPassword.PasswordChar := '*';
-  end;
-
-end;
-
-procedure TfrmLogin.lerINI;
-var
-  Ini: TIniFile;
-  IniFile: string;
-begin
-  IniFile := ExtractFilePath(ParamStr(0)) + 'CONFIG.INI';
-
-  Ini := TIniFile.Create(IniFile);
-
-  try
-    NomeBD  := Ini.ReadString('CONEXAO', 'NOME_BD', '');
-    HostBD  := Ini.ReadString('CONEXAO', 'HOST', '');
-    PortaBD := Ini.ReadString('CONEXAO', 'PORTA', '');
-    SenhaBD := Ini.ReadString('CONEXAO', 'SENHA', '');
-  finally
-    Ini.Free;
   end;
 end;
 

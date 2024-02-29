@@ -69,6 +69,11 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="unitConfINI"/>
       </Unit>
+      <Unit>
+        <Filename Value="uutil.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uUtil"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

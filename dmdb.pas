@@ -5,7 +5,7 @@ unit DMDB;
 interface
 
 uses
-  Classes, SysUtils, ZConnection, ZDataset, unitTelaLogin;
+  Classes, SysUtils, ZConnection, ZDataset, IniFiles;
 
 type
 
@@ -15,6 +15,7 @@ type
     cMariaDB: TZConnection;
     qryUserLogin: TZQuery;
     procedure cMariaDBBeforeConnect(Sender: TObject);
+    procedure ConfigurarConexao;
   private
 
   public
@@ -26,16 +27,34 @@ var
 
 implementation
 
+uses
+  Forms;
+
 {$R *.lfm}
 
 { TDM }
 
 procedure TDM.cMariaDBBeforeConnect(Sender: TObject);
 begin
-  cMariaDB.Database:=NomeBD;
-  cMariaDB.HostName:=HostBD;
-  cMariaDB.Password:=SenhaBD;
-  cMariaDB.Port := StrToInt(PortaBD);
+  ConfigurarConexao;
+end;
+
+procedure TDM.ConfigurarConexao;
+var
+  Ini: TIniFile;
+  IniFile: string;
+begin
+  IniFile := ExtractFilePath(Application.ExeName) + 'config.ini';
+  Ini := TIniFile.Create(IniFile);
+
+  try
+    cMariaDB.HostName := Ini.ReadString('CONEXAO', 'HOST', '');
+    cMariaDB.Port := Ini.ReadInteger('CONEXAO', 'PORTA', 0);
+    cMariaDB.Database := Ini.ReadString('CONEXAO', 'NOME_BD', '');
+    cMariaDB.Password := Ini.ReadString('CONEXAO', 'SENHA', '');
+  finally
+    Ini.Free;
+  end;
 end;
 
 end.

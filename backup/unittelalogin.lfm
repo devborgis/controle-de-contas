@@ -1,83 +1,71 @@
 object frmLogin: TfrmLogin
   Left = 796
-  Height = 390
+  Height = 321
   Top = 354
-  Width = 343
+  Width = 274
   BorderStyle = bsNone
   Caption = 'Sistemas Controlador de Contas'
-  ClientHeight = 390
-  ClientWidth = 343
+  ClientHeight = 321
+  ClientWidth = 274
   Color = 16766421
-  DesignTimePPI = 120
-  OnClose = FormClose
   OnShow = FormShow
-  object Label1: TLabel
-    Left = 16
-    Height = 20
-    Top = 104
-    Width = 37
-    Caption = 'Login'
-  end
-  object editLogin: TEdit
-    Left = 16
-    Height = 28
-    Top = 128
-    Width = 304
-    TabOrder = 0
-    TextHint = 'Digite seu login'
-  end
-  object Label2: TLabel
-    Left = 16
-    Height = 20
-    Top = 168
-    Width = 40
-    Caption = 'Senha'
-  end
   object editPassword: TEdit
-    Left = 16
-    Height = 28
-    Top = 192
-    Width = 280
+    Left = 13
+    Height = 23
+    Top = 154
+    Width = 227
     EchoMode = emPassword
     PasswordChar = '*'
     TabOrder = 1
     TextHint = 'Digite sua senha'
   end
-  object Image1: TImage
-    Left = 296
-    Height = 28
-    Top = 192
-    Width = 24
-    Center = True
-    ImageIndex = 1
-    Images = ImageList1
-    OnClick = Image1Click
+  object Label1: TLabel
+    Left = 13
+    Height = 15
+    Top = 83
+    Width = 30
+    Caption = 'Login'
+  end
+  object editLogin: TEdit
+    Left = 13
+    Height = 23
+    Top = 102
+    Width = 243
+    TabOrder = 0
+    TextHint = 'Digite seu login'
+  end
+  object Label2: TLabel
+    Left = 13
+    Height = 15
+    Top = 134
+    Width = 32
+    Caption = 'Senha'
   end
   object Label3: TLabel
-    Left = 72
-    Height = 20
+    Left = 56
+    Height = 15
     Top = 64
-    Width = 198
+    Width = 168
     Align = alCustom
-    Caption = 'EOS - CONTROLE DE CONTAS'
+    Caption = 'BORGIS CONTROLE DE CONTAS'
     Color = clBlack
     ParentColor = False
   end
   object Label4: TLabel
-    Left = 112
-    Height = 20
-    Top = 344
-    Width = 114
+    Left = 88
+    Height = 15
+    Top = 288
+    Width = 91
     Align = alCustom
     Caption = '©BORGIS vAlpha'
     Color = clBlack
     ParentColor = False
   end
   object btnLogin: TButton
-    Left = 16
-    Height = 31
-    Top = 240
-    Width = 302
+    Left = 13
+    Height = 25
+    Top = 192
+    Width = 242
     Caption = 'LOGAR'
     Color = 13041606
     ModalResult = 1
@@ -85,10 +73,10 @@ object frmLogin: TfrmLogin
     OnClick = btnLoginClick
   end
   object btnCancel: TButton
-    Left = 16
-    Height = 31
-    Top = 280
-    Width = 302
+    Left = 13
+    Height = 25
+    Top = 224
+    Width = 242
     Caption = 'SAIR'
     Color = 11053311
     ModalResult = 11
@@ -96,19 +84,29 @@ object frmLogin: TfrmLogin
     OnClick = btnCancelClick
   end
   object btnConf: TSpeedButton
-    Left = 8
-    Height = 28
-    Top = 8
-    Width = 29
+    Left = 6
+    Height = 22
+    Top = 6
+    Width = 23
     Flat = True
     Images = ImageList1
     ImageIndex = 2
     OnClick = btnConfClick
   end
+  object Image1: TImage
+    Left = 237
+    Height = 22
+    Top = 154
+    Width = 19
+    Center = True
+    ImageIndex = 1
+    Images = ImageList1
+    OnClick = Image1Click
+  end
   object ImageList1: TImageList
     BlendColor = clBlack
-    Left = 272
-    Top = 240
+    Left = 216
+    Top = 264
     Bitmap = {
       4C7A0300000010000000100000007E0200000000000078DAED953D68535114C7
       13331828582AB68E1982286A20433E2043AA924921A1141A708F857C3C1C826D

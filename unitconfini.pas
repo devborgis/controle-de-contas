@@ -37,6 +37,7 @@ var
 
 implementation
 uses unitTelaLogin;
+
 {$R *.lfm}
 
 { TfrmConfINI }
@@ -50,8 +51,8 @@ procedure TfrmConfINI.btnSalvaINIClick(Sender: TObject);
 var
   Ini: TIniFile;
   IniFile: string;
+  DM: TDM;
 begin
-  // Define o caminho completo para o arquivo CONFIG.INI na pasta do executável
   IniFile := ExtractFilePath(ParamStr(0)) + 'CONFIG.INI';
 
   Ini := TIniFile.Create(IniFile);
@@ -63,8 +64,20 @@ begin
     Ini.WriteString('CONEXAO', 'SENHA', editSenhaBD.Text);
 
     Ini.UpdateFile;
+
+    MessageDlg('As configurações foram salvas com sucesso!', mtInformation, [mbOK], 0);
+  except
+    on E: Exception do
+      MessageDlg('Ocorreu um erro ao salvar as configurações: ' + E.Message, mtError, [mbOK], 0);
+  end;
+
+  Ini.Free;
+
+  DM := TDM.Create(nil);
+  try
+    DM.ConfigurarConexao;
   finally
-    Ini.Free;
+    DM.Free;
   end;
 end;
 
@@ -78,15 +91,14 @@ begin
   Ini := TIniFile.Create(IniFile);
 
   try
-    editNomeBD.Text := Ini.ReadString('CONEXAO', 'NOME_BD', '');
-    editHostBD.Text := Ini.ReadString('CONEXAO', 'HOST', '');
+    editNomeBD.Text  := Ini.ReadString('CONEXAO', 'NOME_BD', '');
+    editHostBD.Text  := Ini.ReadString('CONEXAO', 'HOST', '');
     editPortaBD.Text := Ini.ReadString('CONEXAO', 'PORTA', '');
     editSenhaBD.Text := Ini.ReadString('CONEXAO', 'SENHA', '');
   finally
     Ini.Free;
   end;
 end;
-
 
 end.
 

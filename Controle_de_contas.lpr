@@ -10,7 +10,7 @@ uses
   athreads,
   {$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, unitTelaLogin, DMDB, zcomponent, unitTelaSistema, unitConfINI
+  Forms, unitTelaLogin, DMDB, zcomponent, unitTelaSistema, unitConfINI, uUtil
   { you can add units after this };
 
 {$R *.res}
